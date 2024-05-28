@@ -7,7 +7,8 @@ The pipeline takes a gzipped VCF file as input, splits it by chromosome, and per
 
 ## Dependancies
 1. [Nextflow](https://www.nextflow.io)
-2. [Annovar](http://annovar.openbioinformatics.org/en/latest/)  
+2. [Annovar](http://annovar.openbioinformatics.org/en/latest/)
+   - test
 3. [Singularity](https://docs.sylabs.io/guides/3.0/user-guide/index.html)
 
 ## Usage
