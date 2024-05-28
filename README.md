@@ -23,4 +23,10 @@ nextflow run vp.nf --vcf_file path/to/vcf --indx_file path/to/index --build hg19
 | `--annovar_db`    |  ``  |  Folder with annovar databases |
 | `--build`    |  hg19 |  Reference genome |
 | `--outdir` | results  |  Output folder |
- 
+
+## Output
+  | Type      | Description     |
+  |-----------|---------------|
+  | merge.txt      | Unsorted variants with ML prediction appended to annovar output |
+  | prioritised_file.txt  | Sorted variants with ML prediction appended to annovar output |
+  | trimmed_prioritised_file.txt  | Variants from prioritised_file.txt with > 0.5 probability of pathogenicity |
