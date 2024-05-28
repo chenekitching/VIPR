@@ -8,7 +8,14 @@ The pipeline takes a gzipped VCF file as input, splits it by chromosome, and per
 ## Dependancies
 1. [Nextflow](https://www.nextflow.io)
 2. [Annovar](http://annovar.openbioinformatics.org/en/latest/)
-   - test
+   - The following databases need to be installed:
+        - refGene
+        - ensGene
+        - avsnp150
+        - gnomad211_genome (for hg19) or gnomad40_genome (for hg38)
+        - dbnsfp42a
+        - clinvar_20221231
+        - intervar_20180118 
 3. [Singularity](https://docs.sylabs.io/guides/3.0/user-guide/index.html)
 
 ## Usage
@@ -19,9 +26,9 @@ nextflow run vp.nf --vcf_file path/to/vcf --indx_file path/to/index --build hg19
 ## Parameters
 | Name      | Default value | Description     |
 |-----------|---------------|-----------------|
-| `--vcf_file`    |  ``  | bgzipped VCF file |
-| `--indx_file`     |  `` | csi index for vcf.gz file |
-| `--annovar_db`    |  ``  |  Folder with annovar databases |
+| `--vcf_file`    |    | bgzipped VCF file |
+| `--indx_file`     |   | csi index for vcf.gz file |
+| `--annovar_db`    |    |  Folder with annovar databases |
 | `--build`    |  hg19 |  Reference genome |
 | `--outdir` | results  |  Output folder |
 
