@@ -11,3 +11,16 @@ The pipeline takes a gzipped VCF file as input, splits it by chromosome, and per
 3. Singularity
 
 ## Usage
+Simple use case example:
+```bash
+nextflow run vp.nf --vcf_file path/to/vcf --indx_file path/to/index --build hg19 --annovar_db path/to/humandb --outdir path/to/output/directory
+```
+## Parameters
+| Name      | Default value | Description     |
+|-----------|---------------|-----------------|
+| `--vcf_file`    |  ``  | bgzipped VCF file |
+| `--indx_file`     |  `` | csi index for vcf.gz file |
+| `--annovar_db`    |  ``  |  Folder with annovar databases |
+| `--build`    |  hg19 |  Reference genome |
+| `--outdir` | results  |  Output folder |
+ 
