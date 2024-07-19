@@ -1,14 +1,5 @@
 #!/usr/bin/env nextflow
 
-//define parameters
- params.vcf_file = null
- params.indx_file = null
- params.annovar_db = null
- params.mod = "$projectDir/rf_mod-04-23.rds"
- params.split_script = "$projectDir/split.sh"
- params.build = "hg19"
-params.outdir = "results"
-
 /*conditional gnomad params: > gnomad 2 NA to hg19
     default version for hg38 is gnomad 4
 */
@@ -44,7 +35,7 @@ process SPLIT{
 
     script:
     """
-    bash ${params.split_script} $vcf $indx chr
+    bash $projectDir/split.sh $vcf $indx chr
     
     """
 }
