@@ -1,4 +1,4 @@
-# nf-variant-prioritisation
+# VIPR (Variant Interpretation and Prioritisation using Random forest) 
 
 ## Nextflow pipeline to filter, annotate, and prioritise genetic variants
 
@@ -31,6 +31,7 @@ nextflow run vp.nf --vcf_file path/to/vcf --indx_file path/to/index --build hg19
 | `--annovar_db`    |    |  Folder with annovar databases |
 | `--build`    |  hg19 |  Reference genome |
 | `--outdir` | results  |  Output folder |
+| `--mod` | $projectDir/weighted_rf_18-07.rds  |  Location of the machine learning model used for variant prioritisation |
 
 ## Output
   | Type      | Description     |
