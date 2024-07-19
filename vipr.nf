@@ -15,7 +15,7 @@ else if ("${params.build}" == "hg38" ) {
 
 
  log.info """\
-    V P   P I P E L I N E
+    V I P R   P I P E L I N E
     =====================
     vcf          : ${params.vcf_file}
     index        : ${params.indx_file}
