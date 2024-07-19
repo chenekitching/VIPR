@@ -21,7 +21,7 @@ The pipeline takes a gzipped VCF file as input, splits it by chromosome, and per
 ## Usage
 Simple use case example:
 ```bash
-nextflow run vp.nf --vcf_file path/to/vcf --indx_file path/to/index --build hg19 --annovar_db path/to/humandb --outdir path/to/output/directory
+nextflow run vipr.nf --vcf_file path/to/vcf --indx_file path/to/index --build hg19 --annovar_db path/to/humandb --outdir path/to/output/directory
 ```
 ## Parameters
 | Name      | Default value | Description     |
