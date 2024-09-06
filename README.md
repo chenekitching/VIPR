@@ -3,7 +3,7 @@
 ## Nextflow pipeline to filter, annotate, and prioritise genetic variants
 
 ## Description
-The pipeline takes a gzipped VCF file as input, splits it by chromosome, and performs the filtering and annotation steps in parallel. The final process uses a random forest machine learning model to prioritise the variants according to the ACMG criteria.
+The pipeline takes a gzipped VCF file as input, splits it by chromosome, and performs the filtering annotation, and prioritisation steps steps in parallel. The prioritisation step uses a random forest machine learning model to prioritise the variants according to the ACMG criteria.
 
 ## Dependancies
 1. [Nextflow](https://www.nextflow.io)
@@ -19,6 +19,7 @@ The pipeline takes a gzipped VCF file as input, splits it by chromosome, and per
 3. [Singularity](https://docs.sylabs.io/guides/3.0/user-guide/index.html)
 
 ## Usage
+Parameters can either be specified in the nextflow.config file, or directly in the command line as per the example below.
 Simple use case example:
 ```bash
 nextflow run vipr.nf --vcf_file path/to/vcf --indx_file path/to/index --build hg19 --annovar_db path/to/humandb --outdir path/to/output/directory
