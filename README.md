@@ -25,7 +25,7 @@ Simple use case example:
 nextflow run vipr.nf --vcf_file path/to/vcf --indx_file path/to/index --build hg19 --annovar_db path/to/humandb --outdir path/to/output/directory
 ```
 ### Example 
-To run the example, simply execute the following command:
+To run the example, simply execute the following command, and specify the path to your ANNOVAR database (either in the nextflow.config file or as --annovar_db path/to/humandb in the command below):
 ```bash
 nextflow run vipr.nf
 ```
