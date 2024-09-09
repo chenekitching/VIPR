@@ -33,8 +33,8 @@ nextflow run vipr.nf
 ## Parameters
 | Name      | Default value | Description     |
 |-----------|---------------|-----------------|
-| `--vcf_file`    |    | bgzipped VCF file |
-| `--indx_file`     |   | csi index for vcf.gz file |
+| `--vcf_file`    | Example/test_sample_filt.vcf.gz | bgzipped VCF file |
+| `--indx_file`     | Example/test_sample_filt.vcf.gz.csi  | csi index for vcf.gz file |
 | `--annovar_db`    |    |  Folder with annovar databases |
 | `--build`    |  hg19 |  Reference genome |
 | `--outdir` | results  |  Output folder |
