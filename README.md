@@ -5,7 +5,7 @@
 ## Description
 The pipeline takes a gzipped VCF file as input, splits it by chromosome, and performs the filtering annotation, and prioritisation steps steps in parallel. The prioritisation step uses a random forest machine learning model to prioritise the variants according to the ACMG criteria.
 
-## Dependancies
+## Dependencies
 1. [Nextflow](https://www.nextflow.io)
 2. [Annovar](http://annovar.openbioinformatics.org/en/latest/)
    - The following databases need to be installed:
