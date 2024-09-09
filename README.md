@@ -58,7 +58,7 @@ To enter the container, run:
 ```bash
 singularity shell shiny_cont.sif
 ```
-Once inside the container, you can see your /container/path bu running:
+Once inside the container, you can see your /container/path by running:
 ```bash
 pwd
 ```
