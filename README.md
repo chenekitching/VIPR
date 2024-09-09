@@ -46,3 +46,10 @@ nextflow run vipr.nf
   | merge.txt      | Unsorted variants with ML prediction appended to annovar output |
   | prioritised_file.txt  | Sorted variants with ML prediction appended to annovar output |
   | trimmed_prioritised_file.txt  | Variants from prioritised_file.txt with > 0.5 probability of pathogenicity |
+
+## Shiny UI
+To interactively explore the results in the prioritised_file.txt, the Shine user interface can be launched by running the following command. The file name and genome build are specified as parameters. The Shiny app is executed within a Singularity container, so there is no need to install any packages.
+
+```bash
+singularity exec --bind /host/path:/container/path shiny_cont.sif Rscript -e 'shiny::runApp("/mnt/vp_4.R", launch.browser = TRUE)'
+```
