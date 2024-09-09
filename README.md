@@ -51,7 +51,7 @@ nextflow run vipr.nf
 To interactively explore the results in the prioritised_file.txt, the Shine user interface can be launched by running the following command. The file name and genome build are specified as parameters. The Shiny app is executed within a Singularity container, so there is no need to install any packages.
 
 ```bash
-singularity exec --bind /host/path:/container/path shiny_cont.sif Rscript -e 'shiny::runApp("/mnt/vp_4.R", launch.browser = TRUE)'
+singularity exec --bind /host/path:/container/path shiny_cont.sif Rscript -e 'shiny::runApp("/container/path/vipr_shiny.R", launch.browser = TRUE)'
 ```
 Here, /host/path is the absolute path on your host system that contains the shiny script (vipr_shiny.R). /container/path is the directory inside the container where the host path will be mounted. To confirm the /container/path, you can execute the code below:
 To enter the container, run:
