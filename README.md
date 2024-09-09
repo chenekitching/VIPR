@@ -54,11 +54,11 @@ To interactively explore the results in the prioritised_file.txt, the Shine user
 singularity exec --bind /host/path:/container/path shiny_cont.sif Rscript -e 'shiny::runApp("/mnt/vp_4.R", launch.browser = TRUE)'
 ```
 Here, /host/path is the absolute path on your host system that contains the shiny script (vipr_shiny.R). /container/path is the directory inside the container where the host path will be mounted. To confirm the /container/path, you can execute the code below:
-To enter the container, run
+To enter the container, run:
 ```bash
 singularity shell shiny_cont.sif
 ```
-To see what the /container/path is, sun
+Once inside the container, you can see your /container/path bu running:
 ```bash
 pwd
 ```
