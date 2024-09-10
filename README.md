@@ -30,6 +30,9 @@ To run the example, simply execute the following command, and specify the path t
 nextflow run vipr.nf
 ```
 
+## Important note
+When downloading the repository, ensure that the Singularity container files (*.sif) and the random forest model object (weighted_rf_18-07.rds") are not compressed. This will cause issues when running.
+
 ## Parameters
 | Name      | Default value | Description     |
 |-----------|---------------|-----------------|
