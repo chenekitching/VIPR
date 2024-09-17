@@ -22,7 +22,7 @@ The pipeline takes a gzipped VCF file as input, splits it by chromosome, and per
 Parameters can either be specified in the nextflow.config file, or directly in the command line as per the example below.
 Simple use case example:
 ```bash
-nextflow run vipr.nf --vcf_file path/to/vcf --indx_file path/to/index --build hg19 --annovar_db path/to/humandb --outdir path/to/output/directory
+nextflow run vipr.nf --vcf_file path/to/vcf.gz --indx_file path/to/index --build hg19 --annovar_db path/to/humandb --outdir path/to/output/directory
 ```
 ### Example 
 To run the example, simply execute the following command, and specify the path to your ANNOVAR database (either in the nextflow.config file or as --annovar_db path/to/humandb in the command below):
