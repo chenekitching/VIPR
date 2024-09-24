@@ -35,8 +35,7 @@ nextflow run vipr.nf
 ```
 
 ## Important note
-When downloading the repository, ensure that the random forest model object (weighted_rf_18-07.rds") is not compressed. This will cause issues when running.
-
+Before running the Nextfow pipeline, ensure you have downloaded the random forest RDS object () and that it is in the same directory as the vipr.nf script.
 ## Parameters
 | Name      | Default value | Description     |
 |-----------|---------------|-----------------|
