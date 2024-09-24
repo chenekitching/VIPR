@@ -55,7 +55,7 @@ nextflow run vipr.nf
   | trimmed_prioritised_file.txt  | Variants from prioritised_file.txt with > 0.5 probability of pathogenicity |
 
 ## Shiny UI
-To interactively explore the results in the prioritised_file.txt, the Shine user interface can be launched by running the following command. The file name and genome build are specified as parameters. The Shiny app is executed within a Singularity container, so there is no need to install any packages.
+To interactively explore the results in the prioritised_file.txt, the Shiny user interface can be launched by running the following command. The file name and genome build are specified as parameters. The Shiny app is executed within a Singularity container, so there is no need to install any packages.
 
 ```bash
 singularity pull --arch amd64 library://ckitching/vipr/shiny_cont:latest
