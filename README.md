@@ -17,7 +17,11 @@ The pipeline takes a gzipped VCF file as input, splits it by chromosome, and per
         - clinvar_20221231
         - intervar_20180118 
 3. [Singularity](https://docs.sylabs.io/guides/3.0/user-guide/index.html)
-
+   - Singularity containers used by VIPR are stored in https://cloud.sylabs.io/library/ckitching/
+   - Before running the Nextflow pipeline, ensure that your Singularity remote library is set to https://cloud.sylabs.io by running:
+     ```bash
+     singularity remote add library https://cloud.sylabs.io
+     ```
 ## Usage
 Parameters can either be specified in the nextflow.config file, or directly in the command line as per the example below.
 Simple use case example:
@@ -31,7 +35,7 @@ nextflow run vipr.nf
 ```
 
 ## Important note
-When downloading the repository, ensure that the Singularity container files (*.sif) and the random forest model object (weighted_rf_18-07.rds") are not compressed. This will cause issues when running.
+When downloading the repository, ensure that the random forest model object (weighted_rf_18-07.rds") is not compressed. This will cause issues when running.
 
 ## Parameters
 | Name      | Default value | Description     |
@@ -54,6 +58,7 @@ When downloading the repository, ensure that the Singularity container files (*.
 To interactively explore the results in the prioritised_file.txt, the Shine user interface can be launched by running the following command. The file name and genome build are specified as parameters. The Shiny app is executed within a Singularity container, so there is no need to install any packages.
 
 ```bash
+singularity pull --arch amd64 library://ckitching/vipr/shiny_cont:latest
 singularity exec --bind /host/path:/container/path shiny_cont.sif Rscript -e 'shiny::runApp("/container/path/vipr_shiny.R", launch.browser = TRUE)'
 ```
 Here, /host/path is the absolute path on your host system that contains the shiny script (vipr_shiny.R). /container/path is the directory inside the container where the host path will be mounted. To confirm the /container/path, you can execute the code below:
