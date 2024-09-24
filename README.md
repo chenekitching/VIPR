@@ -22,6 +22,9 @@ The pipeline takes a gzipped VCF file as input, splits it by chromosome, and per
      ```bash
      singularity remote add library https://cloud.sylabs.io
      ```
+## Important note
+Before running the Nextfow pipeline, ensure you have downloaded the random forest RDS object (https://github.com/chenekitching/VIPR/releases/download/v1/weighted_rf_18-07.rds) and that it is in the same directory as the vipr.nf script.
+
 ## Usage
 Parameters can either be specified in the nextflow.config file, or directly in the command line as per the example below.
 Simple use case example:
@@ -34,8 +37,6 @@ To run the example, simply execute the following command, and specify the path t
 nextflow run vipr.nf
 ```
 
-## Important note
-Before running the Nextfow pipeline, ensure you have downloaded the random forest RDS object () and that it is in the same directory as the vipr.nf script.
 ## Parameters
 | Name      | Default value | Description     |
 |-----------|---------------|-----------------|
